@@ -1,0 +1,17 @@
+name: Deploy to lenuage
+
+on: push
+
+jobs:
+
+  deploy:
+      name: Deploy
+      if: github.ref == 'refs/heads/master'
+      runs-on: ubuntu-latest
+      steps:
+        - name: Set the Kubernetes context
+          uses: azure/k8s-set-context@v2
+          with:
+            method: service-account
+            k8s-url: ${{ secrets.KUBERNETES_URL }}
+            k8s-secret: ${{ secrets.KUBERNETES_SECRET }}
