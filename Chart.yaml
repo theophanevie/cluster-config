@@ -7,7 +7,7 @@ appVersion: "1.16.0"
 
 dependencies:
   - name: nginx-ingress
-    repository: oci://ghcr.io/nginxinc/charts/
+    repository: oci://ghcr.io/nginxinc/charts
     version: 1.1.2
   - name: cert-manager
     repository: https://charts.jetstack.io
