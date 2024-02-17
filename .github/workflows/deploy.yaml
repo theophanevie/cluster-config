@@ -26,4 +26,4 @@ jobs:
         - name: Helm upgrade
           shell: bash
           run: |
-            helm upgrade --install clust-config
+            helm upgrade --install clust-config .
