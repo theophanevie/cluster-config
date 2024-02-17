@@ -15,3 +15,14 @@ jobs:
             method: service-account
             k8s-url: ${{ secrets.KUBERNETES_URL }}
             k8s-secret: ${{ secrets.KUBERNETES_SECRET }}
+
+        - name: Checkout source code
+          uses: actions/checkout@v3
+
+        - name: Deploy to the Kubernetes cluster
+          uses: azure/k8s-bake@v2.4
+          with:
+            renderEngine: 'helm'
+            helmChart: '.'
+            helm-version: '3.12.2'
+            releaseName: "cluster-config"

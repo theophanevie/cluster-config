@@ -1,0 +1,14 @@
+apiVersion: v2
+name: cluster-config
+description: A Helm chart for Kubernetes
+type: application
+version: 0.1.0
+appVersion: "1.16.0"
+
+dependencies:
+  - name: nginx-ingress
+    repository: oci://ghcr.io/nginxinc/charts/
+    version: 1.1.2
+  - name: cert-manager
+    repository: https://charts.jetstack.io
+    version: 1.14.2
