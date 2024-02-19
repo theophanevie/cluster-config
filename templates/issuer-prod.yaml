@@ -1,15 +1,15 @@
-{{/*apiVersion: cert-manager.io/v1*/}}
-{{/*kind: Issuer*/}}
-{{/*metadata:*/}}
-{{/*  name: letsencrypt-prod*/}}
-{{/*spec:*/}}
-{{/*  acme:*/}}
-{{/*    server: https://acme-v02.api.letsencrypt.org/directory*/}}
-{{/*    email: theophane.vie@petit-nuage.org*/}}
-{{/*    privateKeySecretRef:*/}}
-{{/*      name: letsencrypt-prod*/}}
+apiVersion: cert-manager.io/v1
+kind: Issuer
+metadata:
+  name: letsencrypt-prod
+spec:
+  acme:
+    server: https://acme-v02.api.letsencrypt.org/directory
+    email: theophane.vie@petit-nuage.org
+    privateKeySecretRef:
+      name: letsencrypt-prod
 
-{{/*    solvers:*/}}
-{{/*      - http01:*/}}
-{{/*          ingress:*/}}
-{{/*            ingressClassName: nginx*/}}
+    solvers:
+      - http01:
+          ingress:
+            ingressClassName: nginx
