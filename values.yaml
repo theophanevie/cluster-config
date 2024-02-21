@@ -3,6 +3,10 @@ argo-cd:
   global:
     domain: totoro.petit-nuage.org
 
+  configs:
+    params:
+      server.insecure: true
+
   certificate:
     enabled: true
 
