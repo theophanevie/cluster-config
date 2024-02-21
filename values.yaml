@@ -8,6 +8,7 @@ argo-cd:
 
   server:
     ingress:
+      hostname: argo-cd.petit-nuage.org
       enabled: true
       ingressClassName: nginx
       annotations:
