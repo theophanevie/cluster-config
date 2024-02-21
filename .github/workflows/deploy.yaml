@@ -27,4 +27,4 @@ jobs:
           shell: bash
           run: |
             helm dependency update . 
-            helm upgrade --install cluster-config .
+            helm upgrade --install clust-config .
