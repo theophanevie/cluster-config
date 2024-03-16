@@ -58,12 +58,13 @@ kube-prometheus-stack:
     enabled: false
 
   prometheus:
+    # TODO: add resources
     prometheusSpec:
-    storageSpec:
-      volumeClaimTemplate:
-        spec:
-          storageClassName: csi-cinder-classic
-          accessModes: ["ReadWriteOnce"]
-          resources:
-            requests:
-              storage: 50Gi
+      storageSpec:
+        volumeClaimTemplate:
+          spec:
+            storageClassName: csi-cinder-classic
+            accessModes: ["ReadWriteOnce"]
+            resources:
+              requests:
+                storage: 50Gi
