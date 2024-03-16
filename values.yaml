@@ -59,6 +59,11 @@ kube-prometheus-stack:
 
   prometheus:
     # TODO: add resources
+
+    scrapeInterval: "30s"
+    scrapeTimeout: "30s"
+    evaluationInterval: "30s"
+
     prometheusSpec:
       storageSpec:
         volumeClaimTemplate:
