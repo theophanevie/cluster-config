@@ -46,5 +46,24 @@ grafana:
   persistence:
     enable: true
 
-  # tmp
-  adminPassword: strongpassword
+  # After first install, update admin password
+  # adminPassword: initPassword
+
+kube-prometheus-stack:
+  alertmanager:
+    enabled: false
+  kubeProxy:
+    enabled: false
+  grafana:
+    enabled: false
+
+  prometheus:
+    prometheusSpec:
+    storageSpec:
+      volumeClaimTemplate:
+        spec:
+          storageClassName: csi-cinder-classic
+          accessModes: ["ReadWriteOnce"]
+          resources:
+            requests:
+              storage: 50Gi
