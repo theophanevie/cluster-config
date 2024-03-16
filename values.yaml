@@ -30,6 +30,10 @@ grafana:
       nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
     hosts:
       - grafana.petit-nuage.org
+    tls:
+      - secretName: grafana-tls
+        hosts:
+          - grafana.petit-nuage.org
 
   resources:
     limits:
