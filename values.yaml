@@ -73,3 +73,13 @@ kube-prometheus-stack:
             resources:
               requests:
                 storage: 50Gi
+
+
+sealed-secrets:
+  resources:
+    limits:
+      cpu: 50m
+      memory: 128Mi
+    requests:
+      cpu: 50m
+      memory: 128Mi

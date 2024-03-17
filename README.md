@@ -1,4 +1,15 @@
 # TODO
 
+## Argocd
+
 - docs/operator-manual/declarative-setup.md
-- static ip 
+
+## Nginx
+
+- static ip
+
+## Grafana
+
+- add scraping everything everywhere
+- add dashboard
+- admin password reset on redeploy
