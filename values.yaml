@@ -46,8 +46,10 @@ grafana:
   persistence:
     enable: true
 
-  # After first install, update admin password
-  # adminPassword: initPassword
+  admin:
+    # Secrets must be generate after kubeseal first installation
+    existingSecret: grafana-admin-creds
+
 
 kube-prometheus-stack:
   alertmanager:
