@@ -54,6 +54,15 @@ grafana:
     # Secrets must be generate after kubeseal first installation
     existingSecret: grafana-admin-creds
 
+  datasources:
+    datasources.yaml:
+      apiVersion: 1
+      datasources:
+      - name: Prometheus
+        type: prometheus
+        url: http://clust-config-kube-promethe-prometheus:9090
+        access: proxy
+        isDefault: true
 
 kube-prometheus-stack:
   alertmanager:
