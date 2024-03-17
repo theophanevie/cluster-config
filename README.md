@@ -1,14 +1,9 @@
-# TODO
+# Cluster config
 
-## Argocd
+The umbrella charts for my personal Kubernetes cluster.
+
+### TODO
+
+#### Argocd
 
 - docs/operator-manual/declarative-setup.md
-
-## Nginx
-
-- static ip
-
-## Grafana
-
-- add scraping everything everywhere
-- add dashboard
