@@ -12,4 +12,3 @@
 
 - add scraping everything everywhere
 - add dashboard
-- admin password reset on redeploy

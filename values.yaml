@@ -1,7 +1,7 @@
 
 argo-cd:
   global:
-    domain: totoro.petit-nuage.org
+    domain: argo-cd.petit-nuage.org
 
   configs:
     params:
@@ -15,7 +15,7 @@ argo-cd:
       enabled: true
       ingressClassName: nginx
       annotations:
-        cert-manager.io/cluster-issuer: "letsencrypt-staging"
+        cert-manager.io/cluster-issuer: "letsencrypt-prod"
         nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
         nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
       tls: true
@@ -44,7 +44,11 @@ grafana:
       memory: 128Mi
 
   persistence:
-    enable: true
+    enabled: true
+
+  sidecar:
+    notifiers:
+      enabled: false
 
   admin:
     # Secrets must be generate after kubeseal first installation
