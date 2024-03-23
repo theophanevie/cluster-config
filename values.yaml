@@ -26,11 +26,11 @@ argocd-image-updater:
       serverAddress: "http://clust-config-argocd-server"
       insecure: true
       plaintext: true
-  registries:
-    - name: GitHub Container Registry
-      prefix: ghcr.io
-      api_url: https://ghcr.io
-      credentials: secret:apps/yao-read-registry
+    registries:
+      - name: GitHub Container Registry
+        prefix: ghcr.io
+        api_url: https://ghcr.io
+        credentials: secret:apps/yao-read-registry
 
 grafana:
   ingress:
