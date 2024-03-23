@@ -8,3 +8,7 @@ The umbrella charts for my personal Kubernetes cluster.
 
 - argocd-image-updater cleanup condiguration
 - update yao chart (TODO)
+
+#### Sealed secrets
+
+- Remove fullname harcoding 
