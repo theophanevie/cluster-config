@@ -9,6 +9,8 @@ metadata:
     argocd-image-updater.argoproj.io/image-list: yao=ghcr.io/theophanevie/yao
     argocd-image-updater.argoproj.io/yao.update-strategy: digest
     argocd-image-updater.argoproj.io/yao.allow-tags: regexp:master
+    # TODO configure container registry
+    argocd-image-updater.argoproj.io/yao.pull-secret: apps/yao-read-registry
 spec:
   project: apps
 
