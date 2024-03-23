@@ -6,9 +6,14 @@ The umbrella charts for my personal Kubernetes cluster.
 
 #### Argocd
 
-- argocd-image-updater cleanup condiguration
-- update yao chart (TODO)
+- Argocd-image-updater cleanup configuration
+- Update yao chart (TODO)
+- Update yao tag to semver with image updater
 
 #### Sealed secrets
 
 - Remove fullname harcoding 
+
+#### Misc
+
+- Use same naming strategy for templates
