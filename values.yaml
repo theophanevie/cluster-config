@@ -30,7 +30,7 @@ argocd-image-updater:
       - name: GitHub Container Registry
         prefix: ghcr.io
         api_url: https://ghcr.io
-        credentials: pullsecret:apps/yao-read-registry
+        credentials: pullsecret:default/clust-config-apps-registry
 
 grafana:
   ingress:
