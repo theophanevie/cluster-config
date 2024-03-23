@@ -1,4 +1,3 @@
-
 argo-cd:
   global:
     domain: argo-cd.petit-nuage.org
@@ -19,6 +18,14 @@ argo-cd:
         nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
         nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
       tls: true
+
+argocd-image-updater:
+  config:
+    argocd:
+      grpcWeb: false
+      serverAddress: "http://clust-config-argocd-server"
+      insecure: true
+      plaintext: true
 
 grafana:
   ingress:
@@ -88,7 +95,6 @@ kube-prometheus-stack:
             resources:
               requests:
                 storage: 50Gi
-
 
 sealed-secrets:
   resources:

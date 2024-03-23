@@ -24,3 +24,6 @@ dependencies:
   - name: sealed-secrets
     version: 2.15.1
     repository: https://bitnami-labs.github.io/sealed-secrets
+  - name: argocd-image-updater
+    repository: https://argoproj.github.io/argo-helm
+    version: 0.9.6

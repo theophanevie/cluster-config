@@ -5,6 +5,10 @@ metadata:
   namespace: default
   finalizers:
     - resources-finalizer.argocd.argoproj.io
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: yao=ghcr.io/theophanevie/yao
+    argocd-image-updater.argoproj.io/yao.update-strategy: digest
+    argocd-image-updater.argoproj.io/yao.allow-tags: regexp:master
 spec:
   project: apps
 
