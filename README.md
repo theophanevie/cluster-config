@@ -12,8 +12,4 @@ The umbrella charts for my personal Kubernetes cluster.
 
 #### Sealed secrets
 
-- Remove fullname harcoding 
-
-#### Misc
-
-- Use same naming strategy for templates
+- Remove fullname harcoding
