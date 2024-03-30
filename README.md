@@ -4,7 +4,6 @@ The umbrella charts for my personal Kubernetes cluster.
 
 Most of the tools are completely overkill, but this allows me to test various apps of https://landscape.cncf.io/.
 
-
 ## SealedSecrets
 
 #### Encrypt
@@ -40,3 +39,7 @@ $ kubeseal --recovery-unseal --recovery-private-key main.key < /path/to/secrets-
 #### OpenFeatures
 
 - Test https://openfeature.dev/docs/reference/technologies/server/python
+
+#### Loki
+
+- Clean PVC

@@ -78,7 +78,7 @@ grafana:
 
       - name: Loki
         type: loki
-        url: loki-gateway.default.svc.cluster.local:80
+        url: http://loki-gateway.default.svc.cluster.local:80
         access: proxy
         jsonData:
           timeout: 30
@@ -120,7 +120,8 @@ sealed-secrets:
 
 
 loki:
-  auth_enabled: false
+  loki:
+    auth_enabled: false
 
   minio:
     enable: true
@@ -136,8 +137,4 @@ loki:
 
   limits_config:
     retention_period: 1h
-    retention_stream:
-      - selector: '{namespace="apps"}'
-        priority: 1
-        period: 1h
     per_tenant_override_config: /etc/overrides.yaml
