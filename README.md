@@ -43,3 +43,8 @@ $ kubeseal --recovery-unseal --recovery-private-key main.key < /path/to/secrets-
 #### Loki
 
 - Clean PVC
+  - Storageclass
+  - Size
+- Check retention
+- Remove useless LogsIntegration / PodLogs
+- Check other Grafana agent crd
