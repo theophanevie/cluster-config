@@ -132,10 +132,6 @@ loki:
   backend:
     replicas: 1
 
-  monitoring:
-    lokiCanary:
-      enabled: false
-
   limits_config:
     retention_period: 744h
     retention_stream:
