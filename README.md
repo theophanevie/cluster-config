@@ -7,7 +7,7 @@ Most of the tools are completely overkill, but this allows me to test various ap
 
 ## SealedSecrets
 
-### Encrypt
+#### Encrypt
 
 Fetch `cert.pem` :
 ```shell
@@ -18,7 +18,9 @@ Encrypt :
 $ kubeseal --format=yaml --cert /path/to/cert.pem < /path/to/secrets-unsealed.yaml > /path/to/secrets-sealed.yaml
 ```
 
-### Decrypt
+#### Decrypt
+
+Docs : https://github.com/bitnami-labs/sealed-secrets?tab=readme-ov-file#how-can-i-do-a-backup-of-my-sealedsecrets
 
 Fetch `main.key` :
 ```shell
