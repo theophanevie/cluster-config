@@ -124,16 +124,16 @@ loki:
     enable: true
 
   write:
-    replicas: 1
+    replicas: 2
 
   read:
-    replicas: 1
+    replicas: 2
 
   backend:
-    replicas: 1
+    replicas: 2
 
   limits_config:
-    retention_period: 744h
+    retention_period: 1h
     retention_stream:
       - selector: '{namespace="apps"}'
         priority: 1
