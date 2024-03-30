@@ -109,3 +109,16 @@ sealed-secrets:
     requests:
       cpu: 50m
       memory: 128Mi
+
+
+loki:
+  minio:
+    enable: true
+
+  limits_config:
+    retention_period: 744h
+    retention_stream:
+      - selector: '{namespace="apps"}'
+        priority: 1
+        period: 1h
+    per_tenant_override_config: /etc/overrides.yaml
