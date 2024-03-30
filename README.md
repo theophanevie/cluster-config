@@ -48,3 +48,8 @@ $ kubeseal --recovery-unseal --recovery-private-key main.key < /path/to/secrets-
 - Check retention
 - Remove useless LogsIntegration / PodLogs
 - Check other Grafana agent crd
+
+#### Grafana
+
+- Update dashboards with log
+- Save dasboard as code
