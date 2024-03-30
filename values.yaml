@@ -115,6 +115,19 @@ loki:
   minio:
     enable: true
 
+  write:
+    replicas: 1
+
+  read:
+    replicas: 1
+
+  backend:
+    replicas: 1
+
+  monitoring:
+    lokiCanary:
+      enabled: false
+
   limits_config:
     retention_period: 744h
     retention_stream:
