@@ -76,6 +76,14 @@ grafana:
         access: proxy
         isDefault: true
 
+      - name: Loki
+        type: loki
+        url: loki-gateway.default.svc.cluster.local:80
+        access: proxy
+        jsonData:
+          timeout: 30
+          maxLines: 500
+
 kube-prometheus-stack:
   alertmanager:
     enabled: false
