@@ -120,6 +120,8 @@ sealed-secrets:
 
 
 loki:
+  auth_enabled: false
+
   minio:
     enable: true
 
