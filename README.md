@@ -4,7 +4,9 @@ The umbrella charts for my personal Kubernetes cluster.
 
 Most of the tools are completely overkill, but this allows me to test various apps of https://landscape.cncf.io/.
 
-## SealedSecrets
+## Notes to my future self
+
+### SealedSecrets
 
 #### Encrypt
 
