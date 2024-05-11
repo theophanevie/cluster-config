@@ -44,6 +44,11 @@ spec:
         - name: plex
           image: {{ .Values.plex.image }}
           imagePullPolicy: Always
+          env:
+          {{- range $k, $v := .Values.plex.env }}
+            - name: {{ $k }}
+              value: {{ $v | quote }}
+          {{- end }}
           resources:
             requests:
             {{- range $k, $v := .Values.plex.resources.requests }}

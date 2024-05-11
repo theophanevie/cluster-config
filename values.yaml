@@ -164,6 +164,8 @@ plex:
     limits:
       cpu: 1
       memory: 1Gi
+  env:
+    ADVERTISE_IP: http://57.128.91.6:32400
 
 
 ingress-nginx:
