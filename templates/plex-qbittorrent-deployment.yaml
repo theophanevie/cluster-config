@@ -62,6 +62,9 @@ spec:
             - name: tcp-plex
               containerPort: 32400
               protocol: TCP
+          envFrom:
+            - secretRef:
+                name: {{ .Release.Name }}-plex
       volumes:
         - name: qbittorrent-config
           persistentVolumeClaim:
