@@ -59,3 +59,4 @@ $ kubeseal --recovery-unseal --recovery-private-key main.key < /path/to/secrets-
 
 - Update dashboards with log
 - Save dasboard as code
+- Add pods dashboard
