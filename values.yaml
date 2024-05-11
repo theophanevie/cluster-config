@@ -164,3 +164,8 @@ plex:
     limits:
       cpu: 250m
       memory: 250Mi
+
+
+ingress-nginx:
+  tcp:
+    "32400": "default/clust-config-plex:32400"
