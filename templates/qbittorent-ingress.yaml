@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-staging
+    nginx.ingress.kubernetes.io/backend-protocol: HTTP
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+  name: {{ .Release.Name }}-qbittorrent
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: {{ .Values.qbittorrent.host }}
+    http:
+      paths:
+      - backend:
+          service:
+            name: {{ .Release.Name }}-qbittorrent
+            port:
+              number: 8080
+        path: /
+        pathType: Prefix
+  tls:
+  - hosts:
+    - {{ .Values.qbittorrent.host }}
+    secretName: grafana-tls

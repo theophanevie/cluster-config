@@ -138,3 +138,29 @@ loki:
   limits_config:
     retention_period: 1h
     per_tenant_override_config: /etc/overrides.yaml
+
+qbittorrent:
+  image: linuxserver/qbittorrent:4.6.4
+  downloads:
+    size: 20Gi
+  config:
+    size: 3Gi
+  host: qbittorrent.petit-nuage.org
+  resources:
+    requests:
+      cpu: 50m
+      memory: 100Mi
+    limits:
+      memory: 150Mi
+
+plex:
+  image: linuxserver/plex:1.30.2
+  config_folder:
+    size: 5Gi
+  resources:
+    requests:
+      cpu: 50m
+      memory: 150Mi
+    limits:
+      cpu: 250m
+      memory: 250Mi

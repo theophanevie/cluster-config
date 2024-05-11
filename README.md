@@ -34,6 +34,10 @@ $ kubeseal --recovery-unseal --recovery-private-key main.key < /path/to/secrets-
 
 ### TODO
 
+#### Plex
+
+- https://kubernetes.github.io/ingress-nginx/user-guide/exposing-tcp-udp-services/
+
 #### Sealed secrets
 
 - Remove fullname harcoding
