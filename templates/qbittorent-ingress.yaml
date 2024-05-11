@@ -22,4 +22,4 @@ spec:
   tls:
   - hosts:
     - {{ .Values.qbittorrent.host }}
-    secretName: grafana-tls
+    secretName: qbittorent-tls
