@@ -154,8 +154,8 @@ qbittorrent:
       memory: 150Mi
 
 plex:
-  image: linuxserver/plex:1.30.2
-  config_folder:
+  image: linuxserver/plex:1.40.2
+  config:
     size: 5Gi
   resources:
     requests:
