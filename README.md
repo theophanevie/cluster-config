@@ -36,7 +36,7 @@ $ kubeseal --recovery-unseal --recovery-private-key main.key < /path/to/secrets-
 
 #### Plex
 
-- https://kubernetes.github.io/ingress-nginx/user-guide/exposing-tcp-udp-services/
+- Should be a statefulset
 
 #### Sealed secrets
 
