@@ -34,13 +34,9 @@ $ kubeseal --recovery-unseal --recovery-private-key main.key < /path/to/secrets-
 
 ### TODO
 
-#### Plex
-
-- Should be a statefulset
-
 #### Sealed secrets
 
-- Remove fullname harcoding
+- Remove hardcoded fullname 
 
 #### OpenFeatures
 

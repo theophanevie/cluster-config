@@ -1,16 +1,12 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: StatefulSet
 metadata:
   name: {{ .Release.Name }}-plex-qbittorrent
   labels:
     app: plex-qbittorrent
 spec:
+  serviceName: plex-qbittorrent
   replicas: 1
-  strategy:
-    type: RollingUpdate
-    rollingUpdate:
-      maxUnavailable: 0
-      maxSurge: 100%
   selector:
     matchLabels:
       app: plex-qbittorrent
