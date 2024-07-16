@@ -142,7 +142,7 @@ loki:
 qbittorrent:
   image: linuxserver/qbittorrent:4.6.4
   downloads:
-    size: 20Gi
+    size: 30Gi
   config:
     size: 3Gi
   host: qbittorrent.petit-nuage.org
