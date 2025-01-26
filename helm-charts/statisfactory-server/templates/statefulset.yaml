@@ -30,11 +30,11 @@ spec:
               containerPort: 7777
               protocol: UDP
           volumeMounts:
-            - name: {{ .Release.Name }}-config-all
+            - name: {{ .Release.Name }}
               mountPath: /config
   volumeClaimTemplates:
     - metadata:
-        name: {{ .Release.Name }}-config-all
+        name: {{ .Release.Name }}
       spec:
         accessModes: [ "ReadWriteOnce" ]
         resources:
