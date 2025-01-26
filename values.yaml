@@ -139,14 +139,3 @@ loki:
     retention_period: 1h
     per_tenant_override_config: /etc/overrides.yaml
 
-
-ingress-nginx:
-  controller:
-    service:
-      annotations:
-        loadbalancer.ovhcloud.com/class: octavia
-  udp:
-    "7777": "apps/statisfactory:7777"
-  tcp:
-    "7777": "apps/statisfactory:7777"
-

@@ -3,7 +3,9 @@ kind: Service
 metadata:
   name:  {{ .Release.Name }}
   annotations:
+    loadbalancer.ovhcloud.com/class: octavia
 spec:
+  type: LoadBalancer
   ports:
     - name: "game"
       port: 7777
