@@ -40,7 +40,7 @@ env:
   - name: STEAMBETA
     value: "false"
   - name: ROOTLESS
-    value: "true"
+    value: "false"
 
 
 securityContext:
