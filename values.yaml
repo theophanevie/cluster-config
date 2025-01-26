@@ -171,3 +171,6 @@ plex:
 ingress-nginx:
   tcp:
     "32400": "default/clust-config-plex:32400"
+    "7777": "apss/xxx:7777"
+  udp:
+    "7777": "apss/xxx:7777"
