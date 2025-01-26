@@ -5,7 +5,7 @@ image:
 
 resources:
  limits:
-   memory: 7Gi
+   memory: 12Gi
  requests:
    cpu: 500m
    memory: 6Gi
@@ -41,6 +41,3 @@ env:
     value: "false"
   - name: ROOTLESS
     value: "true"
-
-nodeSelector:
-  nodepool: compute
