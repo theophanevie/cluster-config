@@ -141,6 +141,10 @@ loki:
 
 
 ingress-nginx:
+  controller:
+    service:
+      annotations:
+        loadbalancer.ovhcloud.com/class: octavia
   udp:
     "7777": "apps/statisfactory:7777"
   tcp:
