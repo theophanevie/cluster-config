@@ -30,18 +30,9 @@ spec:
           volumeMounts:
             - name: {{ .Release.Name }}-config-all
               mountPath: /config
-            - name: {{ .Release.Name }}-gamefiles
-              mountPath: /confxig/gamefiles
   volumeClaimTemplates:
     - metadata:
-        name: {{ .Release.Name }}-config-all
-      spec:
-        accessModes: [ "ReadWriteOnce" ]
-        resources:
-          requests:
-            storage: 1Gi
-    - metadata:
-        name: {{ .Release.Name }}-gamefiles
+        name: {{ .Release.Name }}-config-main
       spec:
         accessModes: [ "ReadWriteOnce" ]
         resources:
