@@ -141,8 +141,9 @@ loki:
 
 
 ingress-nginx:
+  udp:
+    "7777": "apps/statisfactory:7777"
   tcp:
     "32400": "apps/plex-qbittorent:32400"
     "7777": "apps/statisfactory:7777"
-  udp:
-    "7777": "apps/statisfactory:7777"
+
