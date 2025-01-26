@@ -28,20 +28,20 @@ spec:
               containerPort: 7777
               protocol: UDP
           volumeMounts:
-            - name: satisfactory-config
+            - name: {{ .Release.Name }}-config-all
               mountPath: /config
-            - name: satisfactory-data
+            - name: {{ .Release.Name }}-gamefiles
               mountPath: /confxig/gamefiles
   volumeClaimTemplates:
     - metadata:
-        name: satisfactory-config
+        name: {{ .Release.Name }}-config-all
       spec:
         accessModes: [ "ReadWriteOnce" ]
         resources:
           requests:
             storage: 1Gi
     - metadata:
-        name: satisfactory-data
+        name: {{ .Release.Name }}-gamefiles
       spec:
         accessModes: [ "ReadWriteOnce" ]
         resources:
