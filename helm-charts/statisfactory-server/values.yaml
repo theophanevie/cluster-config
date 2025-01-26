@@ -1,0 +1,46 @@
+image:
+  # Uses app version as default
+  tag: ""
+  repository: wolveix/satisfactory-server
+
+resources:
+ limits:
+   memory: 7Gi
+ requests:
+   cpu: 500m
+   memory: 6Gi
+
+env:
+  - name: AUTOPAUSE
+    value: "true"
+  - name: AUTOSAVEINTERVAL
+    value: "300"
+  - name: AUTOSAVENUM
+    value: "3"
+  - name: AUTOSAVEONDISCONNECT
+    value: "true"
+  - name: CRASHREPORT
+    value: "true"
+  - name: DEBUG
+    value: "true"
+  - name: DISABLESEASONALEVENTS
+    value: "false"
+  - name: MAXPLAYERS
+    value: "2"
+  - name: PGID
+    value: "1000"
+  - name: PUID
+    value: "1000"
+  - name: SERVERGAMEPORT
+    value: "7777"
+  - name: SERVERIP
+    value: "0.0.0.0"
+  - name: SKIPUPDATE
+    value: "false"
+  - name: STEAMBETA
+    value: "false"
+  - name: ROOTLESS
+    value: "true"
+
+nodeSelector:
+  nodepool: compute
