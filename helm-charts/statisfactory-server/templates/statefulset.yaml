@@ -32,7 +32,7 @@ spec:
               mountPath: /config
   volumeClaimTemplates:
     - metadata:
-        name: {{ .Release.Name }}-config-main
+        name: {{ .Release.Name }}-config-all
       spec:
         accessModes: [ "ReadWriteOnce" ]
         resources:

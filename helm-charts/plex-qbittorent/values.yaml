@@ -1,0 +1,27 @@
+qbittorrent:
+  image: linuxserver/qbittorrent:4.6.4
+  downloads:
+    size: 30Gi
+  config:
+    size: 3Gi
+  host: qbittorrent.petit-nuage.org
+  resources:
+    requests:
+      cpu: 50m
+      memory: 100Mi
+    limits:
+      memory: 150Mi
+
+plex:
+  image: linuxserver/plex:1.40.2
+  config:
+    size: 5Gi
+  resources:
+    requests:
+      cpu: 50m
+      memory: 150Mi
+    limits:
+      cpu: 1
+      memory: 1Gi
+  env:
+    ADVERTISE_IP: http://57.128.91.6:32400
