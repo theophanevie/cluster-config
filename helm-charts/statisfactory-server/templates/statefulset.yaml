@@ -1,0 +1,53 @@
+xapiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: {{ .Release.Name }}
+spec:
+  selector:
+    matchLabels:
+      app: satisfactory
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: satisfactory
+    spec:
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      containers:
+        - name: satisfactory
+          image: {{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}
+          {{- with .Values.env }}
+          env: {{- toYaml . | nindent 10 }}
+          {{- end }}
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+          ports:
+            - name: "api"
+              containerPort: 7777
+              protocol: TCP
+            - name: "game"
+              containerPort: 7777
+              protocol: UDP
+          volumeMounts:
+            - name: satisfactory-config
+              mountPath: /config
+            - name: satisfactory-data
+              mountPath: /confxig/gamefiles
+  volumeClaimTemplates:
+    - metadata:
+        name: satisfactory-config
+      spec:
+        accessModes: [ "ReadWriteOnce" ]
+        resources:
+          requests:
+            storage: 1Gi
+    - metadata:
+        name: satisfactory-data
+      spec:
+        accessModes: [ "ReadWriteOnce" ]
+        resources:
+          requests:
+            storage: 20Gi
