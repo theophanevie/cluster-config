@@ -1,6 +1,6 @@
 argo-cd:
   global:
-    domain: argo-cd.petit-nuage.org
+    domain: argocd.petit-nuage.org
 
   configs:
     params:
