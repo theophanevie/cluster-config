@@ -22,7 +22,7 @@ env:
   - name: CRASHREPORT
     value: "true"
   - name: DEBUG
-    value: "true"
+    value: "false"
   - name: DISABLESEASONALEVENTS
     value: "false"
   - name: MAXPLAYERS
