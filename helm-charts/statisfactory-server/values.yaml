@@ -41,3 +41,17 @@ env:
     value: "false"
   - name: ROOTLESS
     value: "true"
+
+
+securityContext:
+  allowPrivilegeEscalation: false
+  capabilities:
+    drop:
+    - ALL
+  # needs to be set to false that steamcmd can write to /home/steam
+  readOnlyRootFilesystem: false
+  runAsNonRoot: true
+  runAsUser: 1000
+  runAsGroup: 1000
+  seccompProfile:
+    type: RuntimeDefault
