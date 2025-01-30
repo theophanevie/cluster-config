@@ -5,10 +5,10 @@ image:
 
 resources:
  limits:
-   memory: 10Gi
+   memory: 6Gi
  requests:
    cpu: 500m
-   memory: 6Gi
+   memory: 4Gi
 
 env:
   - name: AUTOPAUSE
