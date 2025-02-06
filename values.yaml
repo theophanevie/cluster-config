@@ -1,6 +1,6 @@
 argo-cd:
   global:
-    domain: argocd.petit-nuage.org
+    domain: argo-cd.1o1.sh
 
   configs:
     params:
@@ -41,11 +41,11 @@ grafana:
       nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
       nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
     hosts:
-      - grafana.petit-nuage.org
+      - grafana.1o1.sh
     tls:
       - secretName: grafana-tls
         hosts:
-          - grafana.petit-nuage.org
+          - grafana.1o1.sh
 
   resources:
     limits:
@@ -138,4 +138,3 @@ loki:
   limits_config:
     retention_period: 1h
     per_tenant_override_config: /etc/overrides.yaml
-
